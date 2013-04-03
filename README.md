@@ -2,8 +2,7 @@
 
 MIT license
 
-This will create a [custom command line tool](http://www.jetbrains.com/phpstorm/webhelp/command-line-tool-support.html) for use by [PhpStorm 6](http://www.jetbrains.com/phpstorm/)
-from any command line tool that uses the [Symfony 2.x Console component](https://github.com/symfony/Console) 
+This will create a [custom command line tool](http://www.jetbrains.com/phpstorm/webhelp/command-line-tool-support.html) for use by [PhpStorm 6](http://www.jetbrains.com/phpstorm/). I built it explicitly to invoke the Laravel 4 artisan commands, but it should work for any command line tool that uses the [Symfony 2.x Console component](https://github.com/symfony/Console) 
 
 Very lightly tested on OSX Lion with PhpStorm 6. Should work on Linux or OSX or Windows.
 Windows users may have to explicitly set the path to the PhpStorm prefs.

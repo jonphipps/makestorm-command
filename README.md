@@ -1,4 +1,4 @@
-PhpStorm 6 Command Line Tool Builder
+#PhpStorm 6 Command Line Tool Builder
 
 MIT license
 

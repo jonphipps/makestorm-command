@@ -68,9 +68,9 @@ $longopts = array(
 );
 $options = getopt($shortopts, $longopts);
 
+$toolName = (isset($argv[1])) ? $argv[1] : $toolName;
 $toolName = (isset($options['t'])) ? $options['t'] : "";
 $toolName = (isset($options['toolname'])) ? $options['toolname'] : $toolName;
-$toolName = (isset($argv[1])) ? $argv[1] : $toolName;
 
 if (!$toolName) {
 	die("You must specify the tool name used to define the custom command support in PhpStorm:\nFor instance \"php makestorm.php artisan\"\n");
@@ -112,7 +112,8 @@ if (isset($newXml->command)) {
 
 //let's get the command to run
 $php = isset($php) ? $php : "php";
-$invoker = (string) $newXml->attributes()["invoke"];
+$attributes = $newXml->attributes();
+$invoker = (string)$attributes["invoke"];
 $invoker = preg_replace('/^\"\$PhpExecutable\$\"/', $php, $invoker);
 
 //getthe command list by running the command in the shell
